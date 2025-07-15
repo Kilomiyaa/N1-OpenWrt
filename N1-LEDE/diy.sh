@@ -11,24 +11,30 @@ function git_sparse_clone() {
 
 # Add packages
 #添加科学上网源
-git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+#openclash(无效)
+#git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
-git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
-git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+#git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
+#git clone -b lua --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
+#git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+
 #添加自定义的软件包源
-git_sparse_clone 24.10 https://github.com/Lienol/openwrt-luci applications/luci-app-filebrowser
-git clone --depth=1 https://github.com/kongfl888/luci-app-timedreboot package/luci-app-timedreboot
-git_sparse_clone main https://github.com/OpenListTeam/OpenList-OpenWRT openlist/luci-app-openlist
+#filebrowser(无效)
+#git_sparse_clone 24.10 https://github.com/Lienol/openwrt-luci applications/luci-app-filebrowser
+#定时重启(无效)
+#git clone --depth=1 https://github.com/kongfl888/luci-app-timedreboot package/luci-app-timedreboot
+#Openlist
+git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/openlist
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages ddns-go
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-ddns-go
+
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
 rm -rf feeds/packages/net/v2ray-geodata
