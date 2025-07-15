@@ -11,8 +11,8 @@ function git_sparse_clone() {
 
 # Add packages
 #添加科学上网源
-#openclash(无效)
-#git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
+#openclash
+git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
@@ -26,10 +26,10 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 #git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 #添加自定义的软件包源
-#filebrowser(无效)
-#git_sparse_clone 24.10 https://github.com/Lienol/openwrt-luci applications/luci-app-filebrowser
-#定时重启(无效)
-#git clone --depth=1 https://github.com/kongfl888/luci-app-timedreboot package/luci-app-timedreboot
+#filebrowser
+git_sparse_clone 24.10 https://github.com/Lienol/openwrt-luci applications/luci-app-filebrowser
+#定时重启
+git clone --depth=1 https://github.com/kongfl888/luci-app-timedreboot package/luci-app-timedreboot
 #Openlist
 git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/openlist
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages ddns-go
