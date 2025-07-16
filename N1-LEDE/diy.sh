@@ -25,7 +25,6 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 #filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser-go
 #Openlist
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages openlist
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openlist
