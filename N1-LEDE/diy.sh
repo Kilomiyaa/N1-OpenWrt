@@ -27,16 +27,13 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser
 #Openlist
 git clone https://github.com/sbwml/luci-app-openlist package/openlist
-#cpufreq
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages cpufreq
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-cpufreq
 
 # Remove packages
 # 删除lean库中的插件，使用自定义源中的包。
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
-rm -rf feeds/luci/applications/luci-app-filebrowser
+#rm -rf feeds/luci/applications/luci-app-filebrowser
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/applications/luci-app-mosdns
