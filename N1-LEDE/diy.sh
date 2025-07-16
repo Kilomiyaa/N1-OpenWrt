@@ -23,7 +23,6 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 
 # 添加自定义的软件包源
 #filebrowser
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser
 #Openlist
 git clone https://github.com/sbwml/luci-app-openlist package/openlist
