@@ -28,8 +28,6 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 #添加自定义的软件包源
 #filebrowser
 git_sparse_clone 24.10 https://github.com/Lienol/openwrt-luci applications/luci-app-filebrowser
-#定时重启
-git clone --depth=1 https://github.com/kongfl888/luci-app-timedreboot package/luci-app-timedreboot
 #Openlist
 git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/openlist
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages ddns-go
