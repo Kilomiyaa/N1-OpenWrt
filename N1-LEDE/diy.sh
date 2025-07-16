@@ -9,15 +9,19 @@ function git_sparse_clone() {
   cd .. && rm -rf $repodir
 }
 
+# Modify hostname
+# 修改主机名
+sed -i 's/LEDE/OpenWrt/g' package/base-files/files/bin/config_generate
+
 # Add packages
-#添加科学上网源
+# 添加科学上网源
 #openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 
-#添加自定义的软件包源
+# 添加自定义的软件包源
 #filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser
@@ -26,11 +30,11 @@ git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrow
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages openlist
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openlist
 #cpufreq
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages cpufreq
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-cpufreq
+#git_sparse_clone main https://github.com/kiddin9/kwrt-packages cpufreq
+#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-cpufreq
 
 # Remove packages
-#删除lean库中的插件，使用自定义源中的包。
+# 删除lean库中的插件，使用自定义源中的包。
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
@@ -41,6 +45,7 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/applications/luci-app-design-config
 
 # Default IP
+# 默认IP
 sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generate
 
 #修改默认时间格式
