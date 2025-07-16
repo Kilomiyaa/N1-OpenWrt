@@ -26,8 +26,7 @@ git clone --depth=1 https://github.com/ophub/luci-app-amlogic package/amlogic
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages filebrowser
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-filebrowser
 #Openlist
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages openlist
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openlist
+git clone https://github.com/sbwml/luci-app-openlist package/openlist
 #cpufreq
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages cpufreq
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-cpufreq
